@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["vite/client", "@builder.io/qwik-city/vite"],
+    "baseUrl": "."
+  },
+  "include": ["src", "index.html"]
+}
+

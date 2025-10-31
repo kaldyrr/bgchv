@@ -1,0 +1,31 @@
+{
+  "name": "@crm/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode ssr",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@builder.io/qwik": "^1.5.0",
+    "@builder.io/qwik-city": "^1.5.0",
+    "@builder.io/qwik-react": "^0.5.1",
+    "@crm/model": "file:../../packages/model",
+    "@crm/ui": "file:../../packages/ui",
+    "crm-monorepo": "file:../..",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.7",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.8"
+  }
+}

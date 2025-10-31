@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: crm
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  server:
+    build: ./apps/server
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/crm?schema=public
+      YJS_ROOM: crm
+      YJS_PATH: /yjs
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    volumes:
+      - ./apps/server:/app
+
+volumes:
+  db_data:
+
